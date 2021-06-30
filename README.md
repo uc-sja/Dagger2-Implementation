@@ -18,3 +18,6 @@ Experimental project to evaluate implementation details of Dagger 2 and how it h
 //if the provider module contains all static class then mark the class of the provider module as abstract. In this way there is no need to create an instance of the Module class and the provider methods of the module class will be called directly without the compiler having to create an intance of module class.
 
 ##V.IMP: If there is an injeciton in the constructor and in the constructor the arguments are of primitive type(String, int, etc.) the compiler checks if in the module these arguments are provided in the argument of the module (and then passed onto the object of the constructor class) that is handling the constructor class if not, then it will check if in the module there is a dedicated @Provides methods for the given data type, if not then it will check if values are binded under COMPONENT.Builder's BindInstance annotation(based on data type)
+
+New changes
+

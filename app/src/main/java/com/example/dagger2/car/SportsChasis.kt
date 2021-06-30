@@ -2,8 +2,9 @@ package com.example.dagger2.car
 
 import android.util.Log
 import javax.inject.Inject
+import javax.inject.Named
 
-class SporChasis constructor(private val body: String, private val color: String) : Chasis {
+class SporChasis @Inject constructor(@Named("body") private val body: String, @Named("color") private val color: String) : Chasis {
     private  val TAG = "SportsChasis"
 
     override fun chasisBody() {

@@ -7,10 +7,11 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class ChasisModule(private val body: String, private val color: String) {
-    @Provides
-    fun providesChasis(): Chasis {
-        return  SporChasis(body, color)
-    }
+class ChasisModule() {
 
+    @Provides
+    fun providesChasis(sporChasis: SporChasis): Chasis {
+        return  sporChasis
+    }
+//
 }

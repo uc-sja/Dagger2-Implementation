@@ -21,7 +21,9 @@ class MainActivity : AppCompatActivity() {
 
         val component: CarComponent =
             DaggerCarComponent
-                .builder().chasisModule(ChasisModule("light", "red"))
+                .builder()
+                .body("light")
+                .color("red")
                 .build()
 
         component.abc(this)

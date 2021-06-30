@@ -17,7 +17,7 @@ interface CarComponent {
 
     @Component.Builder
     interface Builder{
-        //binds str
+        //binds str  it
         @BindsInstance
         fun body(@Named("body") body: String):Builder
 

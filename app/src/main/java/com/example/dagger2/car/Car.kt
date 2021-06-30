@@ -21,7 +21,7 @@ class Car @Inject constructor( val engine: Engine, private val wheels: Wheels, p
 
     fun drive(){
         Log.d(TAG, "MyCar drive: at 20Kmph")
-        (chasis as  SporChasis).chasisBody("light")
-        (chasis as  SporChasis).chasisColor("red")
+        (chasis as  SporChasis).chasisBody()
+        (chasis as  SporChasis).chasisColor()
     }
 }

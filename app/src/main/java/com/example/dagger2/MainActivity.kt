@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dagger2.car.Car
 import com.example.dagger2.dagger.CarComponent
+import com.example.dagger2.dagger.ChasisModule
 import com.example.dagger2.dagger.DaggerCarComponent
 import javax.inject.Inject as Inject
 
@@ -20,7 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         val component: CarComponent =
             DaggerCarComponent
-                .create()
+                .builder().chasisModule(ChasisModule("light", "red"))
+                .build()
 
         component.abc(this)
 

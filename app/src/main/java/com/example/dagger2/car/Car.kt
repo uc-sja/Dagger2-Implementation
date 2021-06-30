@@ -1,16 +1,13 @@
-package com.example.dagger2
+package com.example.dagger2.car
 
 import android.util.Log
-import android.widget.Toast
 import javax.inject.Inject
 
 
 //constructor injection
-class Car @Inject constructor(private val wheels: Wheels){
+class Car @Inject constructor( val engine: Engine, private val wheels: Wheels){
     private val TAG = "Car"
 
-    //field injection
-    @Inject lateinit var engine: Engine
 
     @Inject
     fun enableRemote(remote: Remote){
